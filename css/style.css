@@ -46,23 +46,43 @@ h2{
     font-weight: bold;
     padding: 10px;
 }
-p{
+h2.main{
+    border-bottom: 5px solid darkred;
+    padding-bottom: 5px;
+}
+p,ul{
     font-size: 20px;
     padding: 10px;
 }
-ol{
+ol,ul{
+    line-height: 25px;
+}
+#hobbies{
+    padding-left: 50px;
+    list-style-type: circle;
+}
+#BFfood{
+    padding-left: 50px;
+    list-style-type:square;
+}
+#listN{
     list-style-type: lower-alpha;
     list-style-position: inside;
-    text-align: justify;
     padding-left: 10px;
+    text-align: left;
+    padding: 25px;
+    font-size: 20px;
 }
-
-#listN{
+#list10{
+    list-style: decimal;
+    list-style-position: inside;
+    padding-left: 10px;
     text-align: left;
     padding: 25px;
     font-size: 20px;
 }
 img,video{
+    margin-left: 25px;
     padding: 5px;
     align-items: center;
 }
@@ -71,7 +91,7 @@ h3{
     display: inline-block;
     color: darkred;
     font-size: 25px;
-    font-style: bold;
+    font-weight: bold;
     padding: 10px;
     border-bottom: 5px solid salmon;
     margin: 30px;
