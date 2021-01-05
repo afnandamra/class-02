@@ -35,12 +35,13 @@ for (var i = 1; i < 5; i++) {
 }
 //7
 var BFfood = ['sandwiches', 'pancake', 'eggs', 'yogurt bowls', 'cereal'];
-for (var i = 6; i >= 1; i--){
-    var question7 = prompt('What is my favorite breakfast? '+i+' attempts left!');
-    for (var index=0; index < BFfood.length; index++){
-        if (question7.toLowerCase() === BFfood[index]){
+for (var i = 6; i >= 1; i--) {
+    var question7 = prompt('What is my favorite breakfast? ' + i + ' attempts left!');
+    for (var index = 0; index < BFfood.length; index++) {
+        if (question7.toLowerCase() === BFfood[index]) {
             // console.log(BFfood[index]);
-            alert('Correct! '+question7+ ' is one of my favorite breakfasts!');
+            alert('Correct! ' + question7 + ' is one of my favorite breakfasts!');
+            score++;
             index = BFfood.length;
             i = 0;
         }
