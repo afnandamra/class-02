@@ -19,39 +19,13 @@ correctyes(question4);
 var question5 = prompt('Do I hate TV?');
 correctno(question5);
 //6
-for (var i = 1; i < 5; i++) {
-    var question6 = prompt('How old am I?')
-    if (Number(question6) === 25) {
-        alert('That is correct!');
-        score++;
-        break;
-        // i = 5; it is not good to miss with the counter!
-    } else if (Number(question6) < 25) {
-        alert('Too low!');
-    } else if (Number(question6) > 25) {
-        alert('Too high!');
-    } else {
-        alert('Please insert a number!');
-    }
-}
+q6 ('How old am I?',4);
 //7
+
 var BFfood = ['sandwiches', 'pancakes', 'eggs', 'yogurt bowls', 'cereal'];
-var j = 6, correct = false;
-while (j >= 1 && !correct) {
-    var question7 = prompt('What is my favorite breakfast? ' + i + ' attempts left!');
-    for (var index = 0; index < BFfood.length; index++) {
-        if (question7.toLowerCase() === BFfood[index]) {
-            // console.log(BFfood[index]);
-            alert('Correct! ' + question7 + ' is one of my favorite breakfasts!');
-            score++;
-            correct = !correct;
-            break;
-            // index = BFfood.length;
-            // i = 0;
-        }
-    }
-    i--;
-}
+q7 ('What is my favorite breakfast? ',7)
+
+
 // for (var i = 6; i >= 1; i--) {
 //     var question7 = prompt('What is my favorite breakfast? ' + i + ' attempts left!');
 //     for (var index = 0; index < BFfood.length; index++) {
@@ -125,4 +99,40 @@ function greeting() {
     }
 
     return document.write('<h2>' + greeting + username + '!' + '</h2>');
+}
+
+function q6 (msg,num){
+    var question6;
+  for (var i = 1 ; i<= num; i++) {
+    question6 = prompt(msg);
+    if (Number(question6) === 25) {
+        alert('That is correct!');
+        score++;
+        break;
+        // i = 5; it is not good to miss with the counter!
+    } else if (Number(question6) < 25) {
+        alert('Too low!');
+    } else if (Number(question6) > 25) {
+        alert('Too high!');
+    } else {
+        alert('Please insert a number!');
+    } 
+  } 
+}
+function q7 (msg,num){
+    var correct = false;
+    var question7;
+    while (num >= 1 && !correct) {
+
+      question7 = prompt(msg + num + ' attempts left!');
+        for (var index = 0; index < BFfood.length; index++) {
+            if (question7.toLowerCase() === BFfood[index]) {
+                alert('Correct! ' + question7 + ' is one of my favorite breakfasts!');
+                score++;
+                correct = !correct;
+                break;
+            }
+        }
+        num--;
+    }   
 }
