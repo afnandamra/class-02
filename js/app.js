@@ -36,8 +36,8 @@ for (var i = 1; i < 5; i++) {
 }
 //7
 var BFfood = ['sandwiches', 'pancakes', 'eggs', 'yogurt bowls', 'cereal'];
-var i = 6, correct = false;
-while (i >= 1 && !correct) {
+var j = 6, correct = false;
+while (j >= 1 && !correct) {
     var question7 = prompt('What is my favorite breakfast? ' + i + ' attempts left!');
     for (var index = 0; index < BFfood.length; index++) {
         if (question7.toLowerCase() === BFfood[index]) {
